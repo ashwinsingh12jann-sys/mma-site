@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
-/* ── TOKENS ─────────────────────────────────────────────── */
 :root{
   --bg:#f7f6f2;--bg2:#eeecea;--surface:rgba(255,255,255,.75);--surface2:rgba(255,255,255,.45);
   --border:rgba(0,0,0,.08);--text:#0b0b10;--text2:#5a5870;--text3:#9896b0;
@@ -24,8 +23,6 @@
   --cs:0 2px 16px rgba(0,0,0,.4),0 1px 4px rgba(0,0,0,.2);
   --csh:0 8px 40px rgba(124,58,237,.22),0 2px 10px rgba(0,0,0,.25);
 }
-
-/* ── RESET ──────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:15px}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background var(--tr),color var(--tr)}
@@ -34,8 +31,6 @@ img{max-width:100%;display:block;border-radius:var(--rs)}
 button{cursor:pointer;border:none;background:none;font-family:inherit}
 section{position:relative}
 .page{display:none}.page.active{display:block}
-
-/* ── TYPE ───────────────────────────────────────────────── */
 h1,h2,h3,h4{font-family:'Syne',sans-serif;font-weight:800;line-height:1.1;letter-spacing:-.02em}
 .d1{font-size:clamp(2rem,4.5vw,3.6rem)}
 .h2{font-size:clamp(1.5rem,3vw,2.4rem)}
@@ -44,8 +39,6 @@ h1,h2,h3,h4{font-family:'Syne',sans-serif;font-weight:800;line-height:1.1;letter
 .tg{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .body-lg{font-size:.95rem;line-height:1.7;color:var(--text2)}
 .body-sm{font-size:.82rem;line-height:1.6;color:var(--text2)}
-
-/* ── LAYOUT ─────────────────────────────────────────────── */
 .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
 .wrap-lg{max-width:1320px;margin:0 auto;padding:0 20px}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
@@ -55,12 +48,8 @@ h1,h2,h3,h4{font-family:'Syne',sans-serif;font-weight:800;line-height:1.1;letter
 .flex-c{display:flex;align-items:center;justify-content:center}
 .mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mt24{margin-top:24px}.mt40{margin-top:40px}.mt48{margin-top:48px}
 .mb12{margin-bottom:12px}.mb16{margin-bottom:16px}.mb24{margin-bottom:24px}.mb40{margin-bottom:40px}
-
-/* ── GLASS CARD ─────────────────────────────────────────── */
 .glass{background:var(--surface);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--border);box-shadow:var(--cs);border-radius:var(--r)}
 .glass:hover{box-shadow:var(--csh);transform:translateY(-2px);transition:var(--tr)}
-
-/* ── BUTTONS ────────────────────────────────────────────── */
 .btn{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;transition:var(--tr);white-space:nowrap;cursor:pointer}
 .btn-p{background:var(--grad);color:#fff;box-shadow:0 6px 24px rgba(124,58,237,.32)}
 .btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(124,58,237,.46)}
@@ -73,8 +62,6 @@ h1,h2,h3,h4{font-family:'Syne',sans-serif;font-weight:800;line-height:1.1;letter
 .btn-ow{border:2px solid rgba(255,255,255,.4);color:#fff;backdrop-filter:blur(10px)}
 .btn-ow:hover{border-color:#fff;background:rgba(255,255,255,.1)}
 .btn-sm{padding:8px 16px;font-size:.78rem}
-
-/* ── NAV ────────────────────────────────────────────────── */
 nav{position:fixed;top:0;left:0;right:0;height:var(--nav);z-index:1000;transition:background var(--tr),box-shadow var(--tr)}
 nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid var(--border);box-shadow:0 2px 20px rgba(0,0,0,.06)}
 .nav-in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
@@ -91,8 +78,6 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .mob-menu{display:none;position:fixed;top:var(--nav);left:0;right:0;bottom:0;background:var(--bg);z-index:999;padding:28px 20px;flex-direction:column;gap:6px;overflow-y:auto}
 .mob-menu.open{display:flex}
 .mob-menu a{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text);padding:14px 0;border-bottom:1px solid var(--border)}
-
-/* ── HERO ───────────────────────────────────────────────── */
 .hero{min-height:100vh;padding-top:var(--nav);display:flex;align-items:center;overflow:hidden;position:relative}
 .hero-bg{position:absolute;inset:0;pointer-events:none;z-index:0}
 .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.18}
@@ -109,8 +94,6 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .hcheck{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--text2)}
 .hcheck-ico{width:17px;height:17px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.55rem;color:#fff}
 .hero-ctas{display:flex;gap:10px;flex-wrap:wrap}
-
-/* DASH PREVIEW */
 .dash-wrap{position:relative;perspective:1100px}
 .dash-card{background:var(--surface);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:20px;padding:18px;box-shadow:var(--cs);transform:rotateY(-7deg) rotateX(3deg);transition:var(--tr)}
 .dash-card:hover{transform:rotateY(0) rotateX(0)}
@@ -120,10 +103,9 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .ds{background:var(--bg2);border-radius:9px;padding:9px;text-align:center}
 .ds-n{font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .ds-l{font-size:.62rem;color:var(--text3);margin-top:2px}
-
-/* IMAGE PLACEHOLDER — swap these src with your Google Drive direct links */
-.dash-img-placeholder{width:100%;height:140px;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,#1a0040 0%,#3a1080 50%,#0a3060 100%);display:flex;align-items:center;justify-content:center;font-size:.75rem;color:rgba(255,255,255,.5);margin-bottom:12px;position:relative}
-.dash-img-placeholder img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+/* ── HERO DASHBOARD IMAGE ── */
+.dash-img-box{width:100%;height:145px;border-radius:10px;overflow:hidden;margin-bottom:12px;position:relative}
+.dash-img-box img{width:100%;height:100%;object-fit:cover;border-radius:10px}
 .dash-leads{display:flex;flex-direction:column;gap:6px}
 .dl-row{display:flex;align-items:center;gap:8px;padding:6px 10px;background:var(--bg2);border-radius:7px;font-size:.72rem;color:var(--text2)}
 .dl-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
@@ -137,8 +119,6 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .df1{top:-16px;right:-16px;animation-delay:0s}
 .df2{bottom:50px;left:-24px;animation-delay:1.5s}
 .float-n{font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;color:var(--acc2)}
-
-/* ── STATS ──────────────────────────────────────────────── */
 .stats-s{padding:56px 0;background:var(--bg2)}
 .stats-g{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border-radius:var(--r);overflow:hidden}
 .sc{background:var(--bg);padding:32px 24px;text-align:center;transition:var(--tr);position:relative;overflow:hidden}
@@ -146,8 +126,6 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .sc:hover::after{opacity:.04}
 .sn{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:6px}
 .sl{font-size:.8rem;color:var(--text2);font-weight:500}
-
-/* ── PROBLEM ────────────────────────────────────────────── */
 .prob-s{padding:80px 0}
 .prob-g{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .prob-list{display:flex;flex-direction:column;gap:14px}
@@ -162,8 +140,6 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .pq-nums{display:flex;gap:24px;justify-content:center;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2)}
 .pqn-v{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800}
 .pqn-l{font-size:.72rem;opacity:.8}
-
-/* ── FLOW ───────────────────────────────────────────────── */
 .flow-s{padding:80px 0;background:var(--bg2);overflow:hidden}
 .flow-row{display:flex;align-items:center;gap:0;overflow-x:auto;padding:32px 0;scrollbar-width:none}
 .flow-row::-webkit-scrollbar{display:none}
@@ -175,12 +151,9 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .farr{flex-shrink:0;padding:0 6px;display:flex;align-items:center}
 .farr-line{width:32px;height:2px;background:var(--grad);position:relative}
 .farr-line::after{content:'';position:absolute;right:-5px;top:-4px;border:5px solid transparent;border-left:7px solid var(--acc2)}
-/* Flow mini-stats */
 .flow-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;justify-content:center}
 .fstat{padding:10px 22px;border-radius:100px;background:var(--surface);border:1px solid var(--border);font-size:.82rem;display:flex;align-items:center;gap:8px}
 .fstat-n{font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-
-/* ── SERVICES ───────────────────────────────────────────── */
 .srv-s{padding:80px 0}
 .srv-card{padding:28px 24px;border-radius:var(--r);background:var(--surface);border:1px solid var(--border);box-shadow:var(--cs);transition:var(--tr);position:relative;overflow:hidden}
 .srv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transition:var(--tr)}
@@ -190,16 +163,15 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .srv-card h3{font-size:1rem;margin-bottom:9px}
 .srv-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
 .tag{padding:3px 10px;border-radius:100px;font-size:.65rem;font-weight:500;background:var(--bg2);color:var(--text2);border:1px solid var(--border)}
-
-/* ── PORTFOLIO ──────────────────────────────────────────── */
 .port-s{padding:80px 0;background:var(--bg2)}
 .port-g{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .port-card{border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid var(--border);cursor:pointer;transition:var(--tr);position:relative}
 .port-card:hover{transform:translateY(-5px);box-shadow:var(--csh)}
-/* IMAGE AREA — each card has data-img for easy swap */
-.port-img{height:150px;position:relative;overflow:hidden;display:flex;align-items:flex-end}
-.port-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.port-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72) 0%,transparent 60%)}
+/* ── PORTFOLIO CARD IMAGE ── */
+.port-img{height:160px;position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.port-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.port-card:hover .port-img img{transform:scale(1.07)}
+.port-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.78) 0%,rgba(0,0,0,.1) 60%)}
 .port-img-label{position:relative;z-index:1;padding:12px 14px;color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:.88rem;display:flex;align-items:center;gap:8px}
 .port-body{padding:14px 16px}
 .port-body p{font-size:.75rem;color:var(--text2);margin-top:3px}
@@ -207,26 +179,12 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .port-link{font-size:.75rem;color:var(--acc2);font-weight:600;display:flex;align-items:center;gap:4px}
 .port-arrow{position:absolute;top:12px;right:12px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;font-size:.75rem;opacity:0;transition:var(--tr)}
 .port-card:hover .port-arrow{opacity:1}
-
-/* Placeholder image gradient backgrounds */
-.pi-pb{background:linear-gradient(135deg,#667eea,#764ba2)}
-.pi-re{background:linear-gradient(135deg,#f093fb,#f5576c)}
-.pi-ec{background:linear-gradient(135deg,#4facfe,#00f2fe)}
-.pi-cl{background:linear-gradient(135deg,#43e97b,#38f9d7)}
-.pi-ed{background:linear-gradient(135deg,#fa709a,#fee140)}
-.pi-sv{background:linear-gradient(135deg,#a18cd1,#fbc2eb)}
-.pi-gm{background:linear-gradient(135deg,#0f0c29,#302b63)}
-.pi-hs{background:linear-gradient(135deg,#f7971e,#ffd200)}
-
-/* ── HOW WE WORK ────────────────────────────────────────── */
 .how-s{padding:80px 0}
 .how-steps{display:flex;flex-direction:column;gap:18px}
 .how-step{display:flex;gap:24px;align-items:flex-start;padding:24px;border-radius:var(--r);background:var(--surface);border:1px solid var(--border);transition:var(--tr)}
 .how-step:hover{border-color:var(--acc2);transform:translateX(6px)}
 .how-n{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;min-width:52px}
 .how-step h3{font-size:1rem;margin-bottom:6px}
-
-/* ── EXECUTION ──────────────────────────────────────────── */
 .exec-s{padding:80px 0;background:var(--bg2)}
 .exec-flow{display:flex;flex-direction:column;gap:13px;position:relative}
 .exec-flow::before{content:'';position:absolute;left:24px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--acc),var(--acc2),var(--acc3))}
@@ -236,8 +194,6 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .ex-ico{font-size:1.2rem;flex-shrink:0}
 .ex-step h4{font-size:.88rem;margin-bottom:3px}
 .ex-step p{font-size:.76rem;color:var(--text2)}
-
-/* Lifetime relationship section */
 .lifetime-s{padding:56px 0;background:var(--bg)}
 .lt-card{background:var(--grad);border-radius:var(--r);padding:48px 40px;position:relative;overflow:hidden}
 .lt-card::before{content:'';position:absolute;top:-40%;right:-10%;width:400px;height:400px;background:rgba(255,255,255,.06);border-radius:50%}
@@ -249,8 +205,6 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .lt-step p{font-size:.75rem;color:rgba(255,255,255,.75)}
 .lt-title{font-family:'Syne',sans-serif;font-size:clamp(1.3rem,2.5vw,2rem);font-weight:800;color:#fff;margin-bottom:12px}
 .lt-sub{font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.6;margin-bottom:20px}
-
-/* ── MMA OS ─────────────────────────────────────────────── */
 .os-s{padding:80px 0}
 .os-card{background:var(--text);color:var(--bg);border-radius:var(--r);padding:64px 48px;text-align:center;position:relative;overflow:hidden}
 [data-theme=dark] .os-card{background:linear-gradient(135deg,#131328,#1c1840,#0f2a50);color:var(--text);border:1px solid var(--border)}
@@ -262,8 +216,6 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .os-feats{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin-bottom:32px}
 .os-feat{padding:6px 16px;border-radius:100px;background:rgba(255,255,255,.1);font-size:.78rem;font-weight:500;border:1px solid rgba(255,255,255,.14)}
 [data-theme=dark] .os-feat{background:rgba(255,255,255,.05);border-color:var(--border)}
-
-/* ── TRUST ──────────────────────────────────────────────── */
 .trust-s{padding:64px 0;background:var(--bg2)}
 .ind-grid{display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
 .ind-badge{display:flex;align-items:center;gap:7px;padding:8px 16px;border-radius:100px;background:var(--surface);border:1px solid var(--border);font-size:.8rem;font-weight:500;transition:var(--tr)}
@@ -274,8 +226,6 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .rev-text{font-size:.8rem;color:var(--text2);line-height:1.6;margin-bottom:14px}
 .rev-name{font-weight:600;font-size:.85rem}
 .rev-role{font-size:.72rem;color:var(--text3)}
-
-/* ── CTA ────────────────────────────────────────────────── */
 .cta-s{padding:80px 0}
 .cta-card{background:var(--grad);border-radius:var(--r);padding:64px 48px;text-align:center;position:relative;overflow:hidden}
 .cta-card::before{content:'';position:absolute;top:-40%;right:-15%;width:450px;height:450px;background:rgba(255,255,255,.07);border-radius:50%}
@@ -285,8 +235,6 @@ nav.scrolled{background:var(--surface);backdrop-filter:blur(22px);-webkit-backdr
 .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .cta-notes{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:20px}
 .cta-note{font-size:.78rem;color:rgba(255,255,255,.75)}
-
-/* ── FOOTER ─────────────────────────────────────────────── */
 footer{padding:52px 0 24px;background:var(--bg2);border-top:1px solid var(--border)}
 .ft-g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
 .ft-brand p{font-size:.82rem;color:var(--text2);margin-top:10px;max-width:260px;line-height:1.7}
@@ -297,8 +245,6 @@ footer{padding:52px 0 24px;background:var(--bg2);border-top:1px solid var(--bord
 .soc-links{display:flex;gap:7px}
 .soc-link{width:32px;height:32px;border-radius:50%;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.78rem;transition:var(--tr)}
 .soc-link:hover{border-color:var(--acc2);color:var(--acc2);transform:translateY(-2px)}
-
-/* ── PORTFOLIO DETAIL ───────────────────────────────────── */
 .pd-wrap{padding-top:var(--nav)}
 .pd-hero{padding:64px 0;background:var(--bg2)}
 .pd-back{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;color:var(--text2);margin-bottom:18px;transition:var(--tr);cursor:pointer}
@@ -309,22 +255,16 @@ footer{padding:52px 0 24px;background:var(--bg2);border-top:1px solid var(--bord
 .pd-rl{font-size:.72rem;color:var(--text2);margin-top:3px}
 .pd-sec{padding:48px 0}
 .pd-sec+.pd-sec{border-top:1px solid var(--border)}
-/* Client profile card */
 .client-profile{display:flex;gap:20px;align-items:flex-start;padding:20px 24px;border-radius:var(--r);background:var(--surface);border:1px solid var(--border);margin-bottom:24px}
-.client-avatar{width:64px;height:64px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--border)}
-.client-avatar img{width:100%;height:100%;object-fit:cover}
 .client-avatar-placeholder{width:64px;height:64px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;color:#fff;flex-shrink:0}
 .client-info h3{font-size:1rem;margin-bottom:4px}
 .client-info p{font-size:.8rem;color:var(--text2);line-height:1.6}
-/* Media grid */
+/* ── PORTFOLIO DETAIL MEDIA GRID ── */
 .media-g{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .media-item{border-radius:var(--rs);overflow:hidden;aspect-ratio:4/3;background:var(--bg2);position:relative;cursor:pointer}
 .media-item img{width:100%;height:100%;object-fit:cover;transition:var(--tr)}
 .media-item:hover img{transform:scale(1.05)}
-.media-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-size:.72rem;color:var(--text3)}
-.media-placeholder .mi{font-size:2rem}
-/* Media input hint */
-.media-hint{font-size:.72rem;color:var(--text3);padding:8px 14px;background:var(--bg2);border-radius:var(--rs);border:1px dashed var(--border);margin-top:8px}
+.media-label{position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);color:#fff;font-size:.68rem;font-weight:600}
 .wwd-g{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
 .wwd{display:flex;align-items:flex-start;gap:10px;padding:13px 16px;border-radius:var(--rs);background:var(--surface);border:1px solid var(--border)}
 .wwd-ico{font-size:1.1rem;flex-shrink:0}
@@ -338,7 +278,6 @@ footer{padding:52px 0 24px;background:var(--bg2);border-top:1px solid var(--bord
 .chal-list{list-style:none}
 .chal-list li{padding:5px 0;font-size:.82rem;color:var(--text2)}
 .chal-list li::before{content:'→ ';color:var(--acc2)}
-/* Timeline / lifecycle */
 .timeline{display:flex;flex-direction:column;gap:0;position:relative}
 .timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--acc),var(--acc2),var(--acc3))}
 .tl-item{display:flex;gap:18px;align-items:flex-start;padding-bottom:24px;margin-left:48px;position:relative}
@@ -354,8 +293,6 @@ footer{padding:52px 0 24px;background:var(--bg2);border-top:1px solid var(--bord
 .testi-av{width:40px;height:40px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;color:#fff;font-size:.95rem}
 .testi-name{font-weight:600;font-size:.85rem}
 .testi-role{font-size:.74rem;color:var(--text2)}
-
-/* ── PRICING ────────────────────────────────────────────── */
 .price-hero{padding:64px 0 48px;text-align:center;background:var(--bg2)}
 .price-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:48px 0}
 .pc{padding:32px 26px;border-radius:var(--r);background:var(--surface);border:1px solid var(--border);transition:var(--tr);position:relative}
@@ -380,77 +317,64 @@ footer{padding:52px 0 24px;background:var(--bg2);border-top:1px solid var(--bord
 .cmp-tbl tr:hover td{background:var(--surface)}
 .cyes{color:#22c55e;font-weight:700}
 .cno{color:var(--text3)}
-
-/* ── ANIMATIONS ─────────────────────────────────────────── */
 .fi{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
 .fi.vis{opacity:1;transform:translateY(0)}
 .fi1{transition-delay:.08s}.fi2{transition-delay:.16s}.fi3{transition-delay:.24s}.fi4{transition-delay:.32s}
-
-/* ── STICKY CTA (mobile) ────────────────────────────────── */
 .stick-cta{display:none;position:fixed;bottom:14px;left:14px;right:14px;z-index:990}
 .stick-cta .btn-wa{width:100%;justify-content:center;font-size:.88rem}
-
-/* ── MODAL ──────────────────────────────────────────────── */
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);z-index:2000;align-items:center;justify-content:center;padding:20px}
 .modal-box{background:var(--bg);border-radius:var(--r);padding:32px;max-width:440px;width:100%;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.28);border:1px solid var(--border)}
 .modal-close{position:absolute;top:13px;right:13px;width:28px;height:28px;border-radius:50%;background:var(--bg2);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.85rem}
 .modal-input{padding:12px 14px;border-radius:var(--rs);border:1px solid var(--border);background:var(--bg2);color:var(--text);font-family:'DM Sans',sans-serif;font-size:.85rem;outline:none;transition:border-color .2s;width:100%}
 .modal-input:focus{border-color:var(--acc2)}
-select.modal-input{cursor:pointer}
-
-/* ── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width:1024px){
-  .g4{grid-template-columns:repeat(2,1fr)}
-  .stats-g{grid-template-columns:repeat(2,1fr)}
-  .port-g{grid-template-columns:repeat(2,1fr)}
-  .ft-g{grid-template-columns:1fr 1fr;gap:28px}
-  .price-g{grid-template-columns:1fr;max-width:420px;margin:0 auto}
-  .pc.feat{transform:scale(1)}
-  .lt-card-in{grid-template-columns:1fr}
+.g4{grid-template-columns:repeat(2,1fr)}
+.stats-g{grid-template-columns:repeat(2,1fr)}
+.port-g{grid-template-columns:repeat(2,1fr)}
+.ft-g{grid-template-columns:1fr 1fr;gap:28px}
+.price-g{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+.pc.feat{transform:scale(1)}
+.lt-card-in{grid-template-columns:1fr}
 }
 @media(max-width:768px){
-  html{font-size:14px}
-  .nav-links{display:none}
-  .ham{display:flex}
-  .nav-acts .btn-wa,.nav-acts .btn-p{display:none}
-  .hero-in{grid-template-columns:1fr;gap:32px;padding:40px 0 48px}
-  .dash-wrap{display:none}
-  .prob-g{grid-template-columns:1fr;gap:32px}
-  .g2{grid-template-columns:1fr}
-  .g3{grid-template-columns:1fr}
-  .g4{grid-template-columns:1fr}
-  .stats-g{grid-template-columns:1fr 1fr}
-  .port-g{grid-template-columns:1fr 1fr}
-  .how-step{flex-direction:column;gap:12px}
-  .ft-g{grid-template-columns:1fr;gap:20px}
-  .ft-btm{flex-direction:column;gap:13px;text-align:center}
-  .os-card,.cta-card,.lt-card{padding:36px 20px}
-  .pd-hero-in .g2{grid-template-columns:1fr}
-  .pd-res-g{grid-template-columns:1fr}
-  .wwd-g,.chal-g,.media-g{grid-template-columns:1fr}
-  .stick-cta{display:block}
-  .rev-g{grid-template-columns:1fr}
-  .exec-flow{margin-left:0}
-  .exec-flow::before{display:none}
-  .ex-step{margin-left:0}
-  .ex-node{display:none}
-  .cmp-tbl th,.cmp-tbl td{padding:8px 11px;font-size:.74rem}
+html{font-size:14px}
+.nav-links{display:none}
+.ham{display:flex}
+.nav-acts .btn-wa,.nav-acts .btn-p{display:none}
+.hero-in{grid-template-columns:1fr;gap:32px;padding:40px 0 48px}
+.dash-wrap{display:none}
+.prob-g{grid-template-columns:1fr;gap:32px}
+.g2{grid-template-columns:1fr}
+.g3{grid-template-columns:1fr}
+.g4{grid-template-columns:1fr}
+.stats-g{grid-template-columns:1fr 1fr}
+.port-g{grid-template-columns:1fr 1fr}
+.how-step{flex-direction:column;gap:12px}
+.ft-g{grid-template-columns:1fr;gap:20px}
+.ft-btm{flex-direction:column;gap:13px;text-align:center}
+.os-card,.cta-card,.lt-card{padding:36px 20px}
+.pd-res-g{grid-template-columns:1fr}
+.wwd-g,.chal-g,.media-g{grid-template-columns:1fr}
+.stick-cta{display:block}
+.rev-g{grid-template-columns:1fr}
+.exec-flow{margin-left:0}
+.exec-flow::before{display:none}
+.ex-step{margin-left:0}
+.ex-node{display:none}
+.cmp-tbl th,.cmp-tbl td{padding:8px 11px;font-size:.74rem}
 }
 @media(max-width:480px){
-  .port-g{grid-template-columns:1fr}
-  .hero-ctas{flex-direction:column}
-  .hero-ctas .btn{width:100%;justify-content:center}
-  .stats-g{grid-template-columns:1fr 1fr}
-  .cta-btns{flex-direction:column;align-items:center}
-  .cta-btns .btn{width:100%;justify-content:center}
+.port-g{grid-template-columns:1fr}
+.hero-ctas{flex-direction:column}
+.hero-ctas .btn{width:100%;justify-content:center}
+.cta-btns{flex-direction:column;align-items:center}
+.cta-btns .btn{width:100%;justify-content:center}
 }
 </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════
-     NAV
-════════════════════════════════════════════════════════ -->
+<!-- NAV -->
 <nav id="navbar">
   <div class="wrap">
     <div class="nav-in">
@@ -468,7 +392,7 @@ select.modal-input{cursor:pointer}
       </ul>
       <div class="nav-acts">
         <button class="theme-btn" onclick="toggleTheme()" title="Toggle theme">☀️</button>
-        <a href="https://www.instagram.com/master.media.ad" target="_blank" class="btn btn-s btn-sm" style="display:flex;align-items:center;gap:6px;">📸 Instagram</a>
+        <a href="https://www.instagram.com/master.media.ad" target="_blank" class="btn btn-s btn-sm">📸 Instagram</a>
         <a href="https://wa.me/919211985623?text=Hi%20MMA,%20I%20want%20a%20demo.%0AName:%0APhone:%0ABusiness:%0A" target="_blank" class="btn btn-wa btn-sm">💬 WhatsApp Demo</a>
       </div>
       <button class="ham" onclick="toggleMenu()"><span></span><span></span><span></span></button>
@@ -476,7 +400,6 @@ select.modal-input{cursor:pointer}
   </div>
 </nav>
 
-<!-- Mobile Menu -->
 <div class="mob-menu" id="mobMenu">
   <a href="#" onclick="gp('home');toggleMenu()">Home</a>
   <a href="#" onclick="gs('services');toggleMenu()">Services</a>
@@ -489,29 +412,20 @@ select.modal-input{cursor:pointer}
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════
-     HOME PAGE
-════════════════════════════════════════════════════════ -->
+<!-- ═══ HOME PAGE ═══ -->
 <div id="page-home" class="page active">
 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
   </div>
   <div class="wrap">
     <div class="hero-in">
       <div class="hero-content">
         <div class="badge fi"><span class="badge-dot"></span>Jabalpur's #1 Marketing + Automation Company</div>
-        <h1 class="d1 hero-title fi fi1">
-          We Build <span class="tg">Systems</span><br>That Grow Your Business
-        </h1>
-        <p class="hero-sub fi fi2">
-          From Content → Ads | Leads → Sales<br>
-          <strong>Everything Managed &amp; Automated</strong>
-        </p>
+        <h1 class="d1 hero-title fi fi1">We Build <span class="tg">Systems</span><br>That Grow Your Business</h1>
+        <p class="hero-sub fi fi2">From Content → Ads | Leads → Sales<br><strong>Everything Managed &amp; Automated</strong></p>
         <div class="hero-checks fi fi3">
           <div class="hcheck"><div class="hcheck-ico">✓</div>No missed leads — every inquiry tracked &amp; followed up</div>
           <div class="hcheck"><div class="hcheck-ico">✓</div>Full business control in one real-time dashboard</div>
@@ -532,14 +446,17 @@ select.modal-input{cursor:pointer}
             <span style="font-size:.65rem;color:var(--text3);margin-left:7px;font-family:'Syne',sans-serif;font-weight:600;">MMA OS — Live Dashboard</span>
           </div>
           <div class="dash-ms">
-            <div class="ds"><div class="ds-n" data-count="247">0</div><div class="ds-l">Leads Today</div></div>
-            <div class="ds"><div class="ds-n" data-count="84">0</div><div class="ds-l">Converted</div></div>
+            <div class="ds"><div class="ds-n">247</div><div class="ds-l">Leads Today</div></div>
+            <div class="ds"><div class="ds-n">84</div><div class="ds-l">Converted</div></div>
             <div class="ds"><div class="ds-n">₹2.4L</div><div class="ds-l">Revenue</div></div>
           </div>
-          <!-- Dashboard screenshot — replace src with your Google Drive direct link:
-               Format: https://drive.google.com/uc?export=view&id=YOUR_FILE_ID -->
-          <div class="dash-img-placeholder">
-            <img src="https://drive.google.com/uc?export=view&id=DASHBOARD_SCREENSHOT_ID" alt="MMA OS Dashboard" onerror="this.parentNode.innerHTML='<div style=\'display:flex;flex-direction:column;align-items:center;gap:6px;\'><div style=\'font-size:1.8rem;\'>📊</div><div>Paste your dashboard screenshot link here</div></div>'">
+          <!-- Real marketing dashboard photo — Unsplash free photo, 800×400 optimized -->
+          <div class="dash-img-box">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop"
+              alt="MMA OS Dashboard Analytics"
+              loading="lazy"
+            >
           </div>
           <div class="dash-leads">
             <div style="font-size:.62rem;color:var(--text3);margin-bottom:4px;">Live Lead Feed</div>
@@ -647,7 +564,7 @@ select.modal-input{cursor:pointer}
   </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- PORTFOLIO HOME -->
 <section class="port-s" id="port-home">
   <div class="wrap">
     <div class="center mb40 fi">
@@ -657,12 +574,10 @@ select.modal-input{cursor:pointer}
     </div>
     <div class="port-g">
 
-      <!-- PERSONAL BRANDING
-           To add image: replace the gradient div with:
-           <img src="https://drive.google.com/uc?export=view&id=YOUR_ID" alt="..."> -->
+      <!-- PERSONAL BRANDING — Indian professional/speaker photo -->
       <div class="port-card fi" onclick="pd('personal-branding')">
-        <div class="port-img pi-pb">
-          <img src="https://drive.google.com/uc?export=view&id=PERSONAL_BRANDING_IMAGE_ID" alt="Personal Branding" onerror="this.style.display='none'">
+        <div class="port-img">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80&auto=format&fit=crop" alt="Personal Branding" loading="lazy">
           <div class="port-img-overlay"></div>
           <div class="port-img-label">🎯 Personal Branding</div>
         </div>
@@ -671,9 +586,10 @@ select.modal-input{cursor:pointer}
         <div class="port-arrow">↗</div>
       </div>
 
+      <!-- REAL ESTATE — modern building/property photo -->
       <div class="port-card fi fi1" onclick="pd('real-estate')">
-        <div class="port-img pi-re">
-          <img src="https://drive.google.com/uc?export=view&id=REAL_ESTATE_IMAGE_ID" alt="Real Estate" onerror="this.style.display='none'">
+        <div class="port-img">
+          <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80&auto=format&fit=crop" alt="Real Estate" loading="lazy">
           <div class="port-img-overlay"></div>
           <div class="port-img-label">🏗 Real Estate</div>
         </div>
@@ -682,9 +598,10 @@ select.modal-input{cursor:pointer}
         <div class="port-arrow">↗</div>
       </div>
 
+      <!-- ECOMMERCE — product/shopping photo -->
       <div class="port-card fi fi2" onclick="pd('ecommerce')">
-        <div class="port-img pi-ec">
-          <img src="https://drive.google.com/uc?export=view&id=ECOMMERCE_IMAGE_ID" alt="E-Commerce" onerror="this.style.display='none'">
+        <div class="port-img">
+          <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&q=80&auto=format&fit=crop" alt="E-Commerce" loading="lazy">
           <div class="port-img-overlay"></div>
           <div class="port-img-label">🛒 E-Commerce</div>
         </div>
@@ -693,9 +610,10 @@ select.modal-input{cursor:pointer}
         <div class="port-arrow">↗</div>
       </div>
 
+      <!-- CLINICS — doctor/healthcare photo -->
       <div class="port-card fi fi3" onclick="pd('clinics')">
-        <div class="port-img pi-cl">
-          <img src="https://drive.google.com/uc?export=view&id=CLINICS_IMAGE_ID" alt="Clinics" onerror="this.style.display='none'">
+        <div class="port-img">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80&auto=format&fit=crop" alt="Clinics" loading="lazy">
           <div class="port-img-overlay"></div>
           <div class="port-img-label">🏥 Clinics</div>
         </div>
@@ -704,9 +622,10 @@ select.modal-input{cursor:pointer}
         <div class="port-arrow">↗</div>
       </div>
 
+      <!-- EDUCATION — classroom/student photo -->
       <div class="port-card fi" onclick="pd('education')">
-        <div class="port-img pi-ed">
-          <img src="https://drive.google.com/uc?export=view&id=EDUCATION_IMAGE_ID" alt="Education" onerror="this.style.display='none'">
+        <div class="port-img">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80&auto=format&fit=crop" alt="Education" loading="lazy">
           <div class="port-img-overlay"></div>
           <div class="port-img-label">🎓 Education</div>
         </div>
@@ -715,9 +634,10 @@ select.modal-input{cursor:pointer}
         <div class="port-arrow">↗</div>
       </div>
 
+      <!-- SERVICES — professional service/team photo -->
       <div class="port-card fi fi1" onclick="pd('services')">
-        <div class="port-img pi-sv">
-          <img src="https://drive.google.com/uc?export=view&id=SERVICES_IMAGE_ID" alt="Services" onerror="this.style.display='none'">
+        <div class="port-img">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80&auto=format&fit=crop" alt="Services" loading="lazy">
           <div class="port-img-overlay"></div>
           <div class="port-img-label">⚙️ Services</div>
         </div>
@@ -726,9 +646,10 @@ select.modal-input{cursor:pointer}
         <div class="port-arrow">↗</div>
       </div>
 
+      <!-- GAMING — gaming/digital photo -->
       <div class="port-card fi fi2" onclick="pd('gaming')">
-        <div class="port-img pi-gm">
-          <img src="https://drive.google.com/uc?export=view&id=GAMING_IMAGE_ID" alt="Gaming" onerror="this.style.display='none'">
+        <div class="port-img">
+          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&q=80&auto=format&fit=crop" alt="Gaming" loading="lazy">
           <div class="port-img-overlay"></div>
           <div class="port-img-label">🎮 Gaming &amp; Digital</div>
         </div>
@@ -737,9 +658,10 @@ select.modal-input{cursor:pointer}
         <div class="port-arrow">↗</div>
       </div>
 
+      <!-- HOSPITALITY — bakery/food photo — warm, appetizing -->
       <div class="port-card fi fi3" onclick="pd('hospitality')">
-        <div class="port-img pi-hs">
-          <img src="https://drive.google.com/uc?export=view&id=HOSPITALITY_IMAGE_ID" alt="Hospitality" onerror="this.style.display='none'">
+        <div class="port-img">
+          <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=80&auto=format&fit=crop" alt="Hospitality" loading="lazy">
           <div class="port-img-overlay"></div>
           <div class="port-img-label">🏨 Hospitality</div>
         </div>
@@ -761,6 +683,10 @@ select.modal-input{cursor:pointer}
         <div class="lbl mb12 fi">The Process</div>
         <h2 class="h2 mb16 fi fi1">How We Work —<br><span class="tg">Simple &amp; Systematic</span></h2>
         <p class="body-lg fi fi2">No daily stress on your end. We handle the entire operation.</p>
+        <!-- Team at work photo -->
+        <div style="margin-top:28px;border-radius:var(--r);overflow:hidden;height:200px;" class="fi fi3">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80&auto=format&fit=crop" alt="MMA Team Working" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r);">
+        </div>
       </div>
       <div class="how-steps">
         <div class="how-step fi"><div class="how-n">01</div><div><h3>Business Deep-Dive</h3><p class="body-sm">We map your customers, competition &amp; goals. Full growth blueprint in week 1.</p></div></div>
@@ -800,6 +726,10 @@ select.modal-input{cursor:pointer}
             <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;"><span class="body-sm">Avg conversion lift</span><span style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:#22c55e;">2.8x</span></div>
           </div>
         </div>
+        <!-- Analytics/performance visual -->
+        <div style="border-radius:var(--rs);overflow:hidden;height:160px;margin-bottom:18px;">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop" alt="Performance Analytics" style="width:100%;height:100%;object-fit:cover;border-radius:var(--rs);">
+        </div>
         <div style="padding:18px 20px;border-radius:var(--rs);background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);">
           <div style="font-size:.72rem;font-weight:600;color:var(--acc2);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px;">Zero manual work for your team</div>
           <p class="body-sm">Every follow-up, every notification, every report — fully automated. Team steps in only when it's time to close.</p>
@@ -837,7 +767,7 @@ select.modal-input{cursor:pointer}
     <div class="os-card fi">
       <div class="os-card-in">
         <div style="font-size:.65rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:.55;margin-bottom:13px;">Our Secret Weapon</div>
-        <h2 style="">Built on Our Internal<br>Business Operating System</h2>
+        <h2>Built on Our Internal<br>Business Operating System</h2>
         <p>We don't use generic tools. We run everything on MMA OS — our proprietary system that manages your entire business from one place. Built by us. Owned by us. Exclusive to our clients.</p>
         <div class="os-feats">
           <span class="os-feat">📊 Multi-Client Dashboard</span>
@@ -896,9 +826,7 @@ select.modal-input{cursor:pointer}
 
 </div><!-- /page-home -->
 
-<!-- ═══════════════════════════════════════════════════════
-     PORTFOLIO PAGE
-════════════════════════════════════════════════════════ -->
+<!-- ═══ PORTFOLIO PAGE ═══ -->
 <div id="page-portfolio" class="page">
   <div style="padding-top:var(--nav);">
     <div style="padding:64px 0 48px;background:var(--bg2);">
@@ -912,30 +840,26 @@ select.modal-input{cursor:pointer}
     <div style="padding:48px 0;">
       <div class="wrap">
         <div class="port-g">
-          <div class="port-card" onclick="pd('personal-branding')"><div class="port-img pi-pb"><img src="https://drive.google.com/uc?export=view&id=PERSONAL_BRANDING_IMAGE_ID" alt="" onerror="this.style.display='none'"><div class="port-img-overlay"></div><div class="port-img-label">🎯 Personal Branding</div></div><div class="port-body"><p>Politicians · Doctors · Consultants</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
-          <div class="port-card" onclick="pd('real-estate')"><div class="port-img pi-re"><img src="https://drive.google.com/uc?export=view&id=REAL_ESTATE_IMAGE_ID" alt="" onerror="this.style.display='none'"><div class="port-img-overlay"></div><div class="port-img-label">🏗 Real Estate</div></div><div class="port-body"><p>Brokers · Builders · Property Dealers</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
-          <div class="port-card" onclick="pd('ecommerce')"><div class="port-img pi-ec"><img src="https://drive.google.com/uc?export=view&id=ECOMMERCE_IMAGE_ID" alt="" onerror="this.style.display='none'"><div class="port-img-overlay"></div><div class="port-img-label">🛒 E-Commerce</div></div><div class="port-body"><p>Product Brands · D2C · Meesho</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
-          <div class="port-card" onclick="pd('clinics')"><div class="port-img pi-cl"><img src="https://drive.google.com/uc?export=view&id=CLINICS_IMAGE_ID" alt="" onerror="this.style.display='none'"><div class="port-img-overlay"></div><div class="port-img-label">🏥 Clinics</div></div><div class="port-body"><p>Doctors · Dentists · Wellness</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
-          <div class="port-card" onclick="pd('education')"><div class="port-img pi-ed"><img src="https://drive.google.com/uc?export=view&id=EDUCATION_IMAGE_ID" alt="" onerror="this.style.display='none'"><div class="port-img-overlay"></div><div class="port-img-label">🎓 Education</div></div><div class="port-body"><p>Coaching · Online Courses</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
-          <div class="port-card" onclick="pd('services')"><div class="port-img pi-sv"><img src="https://drive.google.com/uc?export=view&id=SERVICES_IMAGE_ID" alt="" onerror="this.style.display='none'"><div class="port-img-overlay"></div><div class="port-img-label">⚙️ Services</div></div><div class="port-body"><p>Agencies · Auto · WiFi · Camera</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
-          <div class="port-card" onclick="pd('gaming')"><div class="port-img pi-gm"><img src="https://drive.google.com/uc?export=view&id=GAMING_IMAGE_ID" alt="" onerror="this.style.display='none'"><div class="port-img-overlay"></div><div class="port-img-label">🎮 Gaming</div></div><div class="port-body"><p>FanWin · Fantasy Apps</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
-          <div class="port-card" onclick="pd('hospitality')"><div class="port-img pi-hs"><img src="https://drive.google.com/uc?export=view&id=HOSPITALITY_IMAGE_ID" alt="" onerror="this.style.display='none'"><div class="port-img-overlay"></div><div class="port-img-label">🏨 Hospitality</div></div><div class="port-body"><p>Hotels · Restaurants · Cakezee</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
+          <div class="port-card" onclick="pd('personal-branding')"><div class="port-img"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80&auto=format&fit=crop" alt="Personal Branding" loading="lazy"><div class="port-img-overlay"></div><div class="port-img-label">🎯 Personal Branding</div></div><div class="port-body"><p>Politicians · Doctors · Consultants</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
+          <div class="port-card" onclick="pd('real-estate')"><div class="port-img"><img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80&auto=format&fit=crop" alt="Real Estate" loading="lazy"><div class="port-img-overlay"></div><div class="port-img-label">🏗 Real Estate</div></div><div class="port-body"><p>Brokers · Builders · Property Dealers</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
+          <div class="port-card" onclick="pd('ecommerce')"><div class="port-img"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&q=80&auto=format&fit=crop" alt="E-Commerce" loading="lazy"><div class="port-img-overlay"></div><div class="port-img-label">🛒 E-Commerce</div></div><div class="port-body"><p>Product Brands · D2C · Meesho</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
+          <div class="port-card" onclick="pd('clinics')"><div class="port-img"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80&auto=format&fit=crop" alt="Clinics" loading="lazy"><div class="port-img-overlay"></div><div class="port-img-label">🏥 Clinics</div></div><div class="port-body"><p>Doctors · Dentists · Wellness</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
+          <div class="port-card" onclick="pd('education')"><div class="port-img"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80&auto=format&fit=crop" alt="Education" loading="lazy"><div class="port-img-overlay"></div><div class="port-img-label">🎓 Education</div></div><div class="port-body"><p>Coaching · Online Courses</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
+          <div class="port-card" onclick="pd('services')"><div class="port-img"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80&auto=format&fit=crop" alt="Services" loading="lazy"><div class="port-img-overlay"></div><div class="port-img-label">⚙️ Services</div></div><div class="port-body"><p>Agencies · Auto · WiFi · Camera</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
+          <div class="port-card" onclick="pd('gaming')"><div class="port-img"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&q=80&auto=format&fit=crop" alt="Gaming" loading="lazy"><div class="port-img-overlay"></div><div class="port-img-label">🎮 Gaming</div></div><div class="port-body"><p>FanWin · Fantasy Apps</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
+          <div class="port-card" onclick="pd('hospitality')"><div class="port-img"><img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=80&auto=format&fit=crop" alt="Hospitality" loading="lazy"><div class="port-img-overlay"></div><div class="port-img-label">🏨 Hospitality</div></div><div class="port-body"><p>Hotels · Restaurants · Cakezee</p></div><div class="port-cta-row"><span class="port-link">View Case Study →</span></div><div class="port-arrow">↗</div></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════
-     PORTFOLIO DETAIL
-════════════════════════════════════════════════════════ -->
+<!-- ═══ PORTFOLIO DETAIL ═══ -->
 <div id="page-portfolio-detail" class="page">
   <div id="pd-content" class="pd-wrap"></div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════
-     PRICING PAGE
-════════════════════════════════════════════════════════ -->
+<!-- ═══ PRICING PAGE ═══ -->
 <div id="page-pricing" class="page">
   <div style="padding-top:var(--nav);">
     <div class="price-hero">
@@ -997,9 +921,7 @@ select.modal-input{cursor:pointer}
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer id="site-footer">
   <div class="wrap">
     <div class="ft-g">
@@ -1044,27 +966,21 @@ select.modal-input{cursor:pointer}
   </div>
 </footer>
 
-<!-- Sticky Mobile CTA -->
 <div class="stick-cta" id="stickCTA">
-  <a href="https://wa.me/919211985623?text=Hi%20MMA,%20I%20want%20a%20demo.%0AName:%0APhone:%0ABusiness:%0A" target="_blank" class="btn btn-wa" style="width:100%;justify-content:center;">💬 Book Free Demo on WhatsApp</a>
+  <a href="https://wa.me/919211985623?text=Hi%20MMA,%20I%20want%20a%20demo.%0AName:%0APhone:%0ABusiness:%0A" target="_blank" class="btn btn-wa">💬 Book Free Demo on WhatsApp</a>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════
-     PORTFOLIO DATA + JS
-════════════════════════════════════════════════════════ -->
+<!-- ═══ PORTFOLIO DATA + JS ═══ -->
 <script>
-// ── PORTFOLIO DATA ────────────────────────────────────────
-// For each portfolio, add your media (photos/videos) by replacing the Google Drive IDs.
-// Format for images: https://drive.google.com/uc?export=view&id=YOUR_FILE_ID
-// Format for videos: Use a YouTube embed or Google Drive video preview link.
+// ── PORTFOLIO DATA with real Unsplash image URLs ──────────
+// All images: free Unsplash, no login needed, load directly in browser
+// Size params: w=800, q=80 for HD quality, fast load
 
 const PD = {
   'real-estate': {
     title:'Real Estate Growth System',cat:'Real Estate',grad:'linear-gradient(135deg,#f093fb,#f5576c)',ico:'🏗',
     subtitle:'How we helped Alash Associates & real estate brokers in Jabalpur generate 3x more quality leads using content + automation',
     client:'Alash Associates & Real Estate Brokers, Jabalpur, MP',
-    // Client profile photo — paste Google Drive direct link
-    clientPhoto:'https://drive.google.com/uc?export=view&id=CLIENT_PHOTO_RE',
     clientBio:'A leading real estate broker in Jabalpur with expertise in residential flats, plots, and commercial properties. Before MMA, relying entirely on word-of-mouth with no digital presence or lead tracking.',
     results:[{n:'120 → 340',l:'Monthly Leads'},{n:'18% → 32%',l:'Conversion Rate'},{n:'₹2L → ₹5.5L',l:'Monthly Revenue'}],
     whatWeDid:[
@@ -1073,17 +989,17 @@ const PD = {
       {i:'🤖',t:'Lead Automation',d:'WhatsApp instant response + AI qualification call + 7-day nurture sequence'},
       {i:'📊',t:'CRM Pipeline',d:'Full tracking: inquiry → site visit → negotiation → closure + revenue dashboard'},
     ],
-    // Add your creatives/screenshots here
+    // Unsplash: real estate building exterior, analytics chart, modern interior
     media:[
-      {src:'https://drive.google.com/uc?export=view&id=RE_CREATIVE_1',label:'Ad Creative 1'},
-      {src:'https://drive.google.com/uc?export=view&id=RE_CREATIVE_2',label:'Ad Creative 2'},
-      {src:'https://drive.google.com/uc?export=view&id=RE_DASHBOARD',label:'CRM Dashboard'},
+      {src:'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80&auto=format&fit=crop',label:'Property Ads Campaign'},
+      {src:'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80&auto=format&fit=crop',label:'Real Estate Marketing'},
+      {src:'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop',label:'Lead Dashboard'},
     ],
     timeline:[
       {i:'📋',t:'Week 1–2: Strategy & Setup',d:'Mapped buyer personas, set up Meta ad account, built WhatsApp automation flow & CRM pipeline'},
       {i:'🎬',t:'Week 3: Content Shoot',d:'2-day shoot — 8 property tour reels, 4 area guide videos, 2 client testimonial videos captured'},
       {i:'📢',t:'Week 4: Launch',d:'First campaigns live. WhatsApp bot activated. Leads started flowing within 48 hours of launch'},
-      {i:'📞',t:'Month 2: AI Calling Active',d:'AI call trigger added. Response time dropped to &lt;60 sec. Lead quality improved significantly'},
+      {i:'📞',t:'Month 2: AI Calling Active',d:'AI call trigger added. Response time dropped to <60 sec. Lead quality improved significantly'},
       {i:'💰',t:'Month 3: Revenue Scaled',d:'Monthly revenue went from ₹2L to ₹5.5L. Conversion rate doubled from 18% to 32%'},
       {i:'🔁',t:'Ongoing: Lifetime Loop',d:'Post-sale review automation, referral reward system, monthly festive campaigns — relationship never goes cold'},
     ],
@@ -1095,7 +1011,6 @@ const PD = {
     title:'Personal Brand Authority System',cat:'Personal Branding',grad:'linear-gradient(135deg,#667eea,#764ba2)',ico:'🎯',
     subtitle:'Building strong digital authority for politicians, doctors, relationship consultants & founders in Madhya Pradesh',
     client:'BJP & Congress Campaign Profiles, Relationship Consultant, Law Teacher, Doctor Profiles — Jabalpur',
-    clientPhoto:'https://drive.google.com/uc?export=view&id=CLIENT_PHOTO_PB',
     clientBio:'Multiple high-profile personal brands — from political figures to service professionals — all needing consistent digital authority, reach, and lead generation through their personal profiles.',
     results:[{n:'10K → 45K',l:'Instagram Followers'},{n:'8x',l:'Lead Increase'},{n:'95%',l:'Brand Trust Score'}],
     whatWeDid:[
@@ -1104,10 +1019,11 @@ const PD = {
       {i:'📢',t:'Growth + Lead Ads',d:'Profile growth campaigns + lead gen for consultation bookings'},
       {i:'🤖',t:'DM Automation (ManyChat)',d:'Keyword-triggered DM flows for every post CTA — instant consultation booking'},
     ],
+    // Unsplash: confident businessman/professional, phone screen showing analytics, content creation
     media:[
-      {src:'https://drive.google.com/uc?export=view&id=PB_REEL_SCREENSHOT',label:'Reel Performance'},
-      {src:'https://drive.google.com/uc?export=view&id=PB_CAMPAIGN',label:'Campaign Visual'},
-      {src:'https://drive.google.com/uc?export=view&id=PB_ANALYTICS',label:'Instagram Analytics'},
+      {src:'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80&auto=format&fit=crop',label:'Brand Authority Content'},
+      {src:'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80&auto=format&fit=crop',label:'Instagram Growth'},
+      {src:'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80&auto=format&fit=crop',label:'Campaign Performance'},
     ],
     timeline:[
       {i:'🎯',t:'Week 1: Brand Audit & Identity',d:'Defined tone, content pillars, visual identity. Hinglish voice finalized for local audience connection'},
@@ -1125,7 +1041,6 @@ const PD = {
     title:'E-Commerce Scaling System',cat:'E-Commerce & Product Brands',grad:'linear-gradient(135deg,#4facfe,#00f2fe)',ico:'🛒',
     subtitle:'Scaling product brands to 7-figure revenue — turmeric brand, Cakezee bakery & Urban Miles on Meesho',
     client:'Organic Turmeric Brand, Cakezee Bakery, Urban Miles (Meesho) — Multiple E-Commerce Clients',
-    clientPhoto:'https://drive.google.com/uc?export=view&id=CLIENT_PHOTO_EC',
     clientBio:'Multiple e-commerce brands across D2C, food delivery, and marketplace selling. Before MMA: manually managing orders, random product posts, zero performance tracking.',
     results:[{n:'₹8L → ₹1.2Cr',l:'Annual Revenue'},{n:'350%',l:'ROAS Improvement'},{n:'40+ daily',l:'Online Orders'}],
     whatWeDid:[
@@ -1134,10 +1049,11 @@ const PD = {
       {i:'🛒',t:'Store Optimization',d:'Meesho + website listings optimized. Ordering flow simplified'},
       {i:'💬',t:'Order Automation',d:'WhatsApp ordering bot with menu, delivery updates & repeat-purchase prompts'},
     ],
+    // Unsplash: product flatlay, shopping bags, ecommerce packaging
     media:[
-      {src:'https://drive.google.com/uc?export=view&id=EC_PRODUCT_SHOT',label:'Product Visual'},
-      {src:'https://drive.google.com/uc?export=view&id=EC_AD_CREATIVE',label:'Ad Creative'},
-      {src:'https://drive.google.com/uc?export=view&id=EC_ORDERS',label:'Order Dashboard'},
+      {src:'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80&auto=format&fit=crop',label:'Product Launch Campaign'},
+      {src:'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80&auto=format&fit=crop',label:'Online Store'},
+      {src:'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format&fit=crop',label:'Sales Analytics'},
     ],
     timeline:[
       {i:'📦',t:'Week 1: Product Positioning',d:'Defined unique selling angle, target audience, and competitor gap for each brand'},
@@ -1155,7 +1071,6 @@ const PD = {
     title:'Healthcare & Clinic Growth System',cat:'Clinics & Healthcare',grad:'linear-gradient(135deg,#43e97b,#38f9d7)',ico:'🏥',
     subtitle:'Doubling patient appointments for doctors, clinics and wellness centers in Jabalpur',
     client:'Doctor Consultants, Dental Clinics, Wellness Centers — Healthcare Clients, Jabalpur',
-    clientPhoto:'https://drive.google.com/uc?export=view&id=CLIENT_PHOTO_CL',
     clientBio:'Healthcare professionals with strong expertise but no digital patient acquisition system. Before MMA: entirely dependent on referrals with no online booking, no reviews management.',
     results:[{n:'2x',l:'Monthly Appointments'},{n:'65%',l:'Online Booking Rate'},{n:'4.8★',l:'Google Rating'}],
     whatWeDid:[
@@ -1164,10 +1079,11 @@ const PD = {
       {i:'📅',t:'Appointment Automation',d:'WhatsApp booking bot with date/time picker, reminder sequences — zero missed appointments'},
       {i:'⭐',t:'Reputation Management',d:'Post-visit Google & Instagram review automation + rating improvement campaigns'},
     ],
+    // Unsplash: doctor consulting, medical professional, clinic interior
     media:[
-      {src:'https://drive.google.com/uc?export=view&id=CL_REEL',label:'Doctor Reel'},
-      {src:'https://drive.google.com/uc?export=view&id=CL_BOOKING',label:'Booking System'},
-      {src:'https://drive.google.com/uc?export=view&id=CL_REVIEWS',label:'Google Reviews'},
+      {src:'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80&auto=format&fit=crop',label:'Healthcare Content'},
+      {src:'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80&auto=format&fit=crop',label:'Doctor Authority Reels'},
+      {src:'https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=800&q=80&auto=format&fit=crop',label:'Booking System'},
     ],
     timeline:[
       {i:'🏥',t:'Week 1: Digital Presence Setup',d:'Google Business optimized, Instagram profile built, first authority content created'},
@@ -1185,7 +1101,6 @@ const PD = {
     title:'Education & Coaching Growth System',cat:'Education & Coaching',grad:'linear-gradient(135deg,#fa709a,#fee140)',ico:'🎓',
     subtitle:'Filling coaching batches and increasing admissions through automated digital systems in Madhya Pradesh',
     client:'Coaching Institutes, Online Course Creators, School Admission Campaigns — MP',
-    clientPhoto:'https://drive.google.com/uc?export=view&id=CLIENT_PHOTO_ED',
     clientBio:'Coaching institutes with strong teaching quality but struggling to fill batches in competitive local markets. Losing students to competitors who had stronger digital presence.',
     results:[{n:'+40%',l:'Admissions Increase'},{n:'₹90K',l:'Monthly Revenue Added'},{n:'3x',l:'Lead Quality Improvement'}],
     whatWeDid:[
@@ -1194,10 +1109,11 @@ const PD = {
       {i:'🤖',t:'Enrollment Automation',d:'WhatsApp course info bot → demo class booking → fee payment link auto-sent'},
       {i:'📊',t:'Batch Fill Dashboard',d:'Real-time tracking of admission funnel — inquiry → demo → enrolled → paid'},
     ],
+    // Unsplash: students studying, classroom, teacher teaching
     media:[
-      {src:'https://drive.google.com/uc?export=view&id=ED_RESULT',label:'Result Announcement'},
-      {src:'https://drive.google.com/uc?export=view&id=ED_AD',label:'Admission Ad'},
-      {src:'https://drive.google.com/uc?export=view&id=ED_DASHBOARD',label:'Batch Dashboard'},
+      {src:'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80&auto=format&fit=crop',label:'Admission Campaign'},
+      {src:'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80&auto=format&fit=crop',label:'Student Success Content'},
+      {src:'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&q=80&auto=format&fit=crop',label:'Enrollment Dashboard'},
     ],
     timeline:[
       {i:'🎓',t:'Week 1: Brand & Strategy',d:'Defined unique teaching approach, competitor gap, and target parent/student profile for ads'},
@@ -1215,7 +1131,6 @@ const PD = {
     title:'Service Business Growth System',cat:'Service Businesses',grad:'linear-gradient(135deg,#a18cd1,#fbc2eb)',ico:'⚙️',
     subtitle:'Scaling local service businesses through digital authority, inquiry automation & brand building',
     client:'Sales Agencies, Camera Services, WiFi Providers, Automobile Service Centers — Jabalpur',
-    clientPhoto:'https://drive.google.com/uc?export=view&id=CLIENT_PHOTO_SV',
     clientBio:'Local service businesses with great work quality but zero digital presence. Inquiries limited to referrals, no tracking, no online brand — limiting growth to personal networks only.',
     results:[{n:'3x',l:'Monthly Inquiries'},{n:'70%',l:'Lead-to-Quote Rate'},{n:'₹1.5L+',l:'Revenue Added Monthly'}],
     whatWeDid:[
@@ -1224,10 +1139,11 @@ const PD = {
       {i:'💬',t:'Quote Automation',d:'WhatsApp service menu bot — instant quote based on requirement'},
       {i:'📊',t:'Job Tracking CRM',d:'Pipeline from inquiry → quote → job confirmed → completed → payment received → review'},
     ],
+    // Unsplash: business team meeting, office work, professional handshake
     media:[
-      {src:'https://drive.google.com/uc?export=view&id=SV_WORK',label:'Work Showcase'},
-      {src:'https://drive.google.com/uc?export=view&id=SV_AD',label:'Local Ad'},
-      {src:'https://drive.google.com/uc?export=view&id=SV_CRM',label:'Job CRM'},
+      {src:'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80&auto=format&fit=crop',label:'Team & Service'},
+      {src:'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80&auto=format&fit=crop',label:'Client Meetings'},
+      {src:'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80&auto=format&fit=crop',label:'Analytics & Growth'},
     ],
     timeline:[
       {i:'📋',t:'Week 1: Digital Foundation',d:'Google Business built, Instagram profile created, first portfolio content prepared'},
@@ -1245,7 +1161,6 @@ const PD = {
     title:'Gaming & Fantasy App Growth System',cat:'Gaming & Digital Products',grad:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',ico:'🎮',
     subtitle:'User acquisition, engagement & retention system for FanWin fantasy gaming platform',
     client:'FanWin Fantasy Platform — Gaming & Digital Brand',
-    clientPhoto:'https://drive.google.com/uc?export=view&id=CLIENT_PHOTO_GM',
     clientBio:'Fantasy gaming platform competing in a high-CAC market. Struggling to retain users after first game. No organic growth strategy — entirely dependent on paid installs.',
     results:[{n:'10K+',l:'User Registrations'},{n:'45%',l:'Retention Rate'},{n:'8x',l:'Contest Participation'}],
     whatWeDid:[
@@ -1254,10 +1169,11 @@ const PD = {
       {i:'🤖',t:'User Engagement Bot',d:'WhatsApp contest alerts, match reminders, winner notifications — automated'},
       {i:'📊',t:'User Analytics',d:'Dashboard tracking DAU, retention, revenue per user, contest participation rates'},
     ],
+    // Unsplash: gaming setup, esports, neon lighting, phone gaming
     media:[
-      {src:'https://drive.google.com/uc?export=view&id=GM_CONTENT',label:'Gaming Content'},
-      {src:'https://drive.google.com/uc?export=view&id=GM_APP',label:'App Screenshot'},
-      {src:'https://drive.google.com/uc?export=view&id=GM_ANALYTICS',label:'User Analytics'},
+      {src:'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80&auto=format&fit=crop',label:'Gaming Community Content'},
+      {src:'https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&q=80&auto=format&fit=crop',label:'App Install Campaign'},
+      {src:'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80&auto=format&fit=crop',label:'User Retention Dashboard'},
     ],
     timeline:[
       {i:'🎮',t:'Week 1: Content Strategy',d:'Defined gaming content pillars — tips, prediction, winners, tutorials. Tone set for young audience'},
@@ -1275,7 +1191,6 @@ const PD = {
     title:'Hospitality & Food Growth System',cat:'Hotels, Restaurants & Bakeries',grad:'linear-gradient(135deg,#f7971e,#ffd200)',ico:'🏨',
     subtitle:'Driving daily online orders, footfall and bookings for food & hospitality businesses',
     client:'Hotels, Restaurants, Cakezee Bakery — Hospitality Clients, Jabalpur',
-    clientPhoto:'https://drive.google.com/uc?export=view&id=CLIENT_PHOTO_HS',
     clientBio:'Cakezee is MMA\'s own bakery brand — built from scratch. Plus hotel and restaurant clients needing consistent footfall, online orders, and event bookings from digital channels.',
     results:[{n:'40+ daily',l:'Online Orders'},{n:'60%',l:'Direct Booking Increase'},{n:'4.9★',l:'Platform Rating'}],
     whatWeDid:[
@@ -1284,10 +1199,11 @@ const PD = {
       {i:'📅',t:'WhatsApp Ordering System',d:'Menu bot with item categories, custom order, delivery/pickup option & payment link'},
       {i:'⭐',t:'Review Campaigns',d:'Post-purchase review request sequence + Zomato/Swiggy rating management'},
     ],
+    // Unsplash: beautiful cake/bakery, food photography, restaurant ambiance
     media:[
-      {src:'https://drive.google.com/uc?export=view&id=HS_FOOD',label:'Food Reel'},
-      {src:'https://drive.google.com/uc?export=view&id=HS_ORDER',label:'Order System'},
-      {src:'https://drive.google.com/uc?export=view&id=HS_REVIEWS',label:'Reviews'},
+      {src:'https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=800&q=80&auto=format&fit=crop',label:'Food Content (Cakezee Style)'},
+      {src:'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80&auto=format&fit=crop',label:'Bakery Campaign'},
+      {src:'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80&auto=format&fit=crop',label:'Restaurant Marketing'},
     ],
     timeline:[
       {i:'🍰',t:'Week 1: Brand & Menu Setup',d:'Visual brand identity built. Full product menu photographed. WhatsApp bot configured'},
@@ -1323,7 +1239,8 @@ function pd(key){
 function buildPD(d){
   const mediaItems=d.media.map(m=>`
     <div class="media-item">
-      <img src="${m.src}" alt="${m.label}" onerror="this.parentNode.innerHTML='<div class=\\'media-placeholder\\'><div class=\\'mi\\'>🖼</div><div>${m.label}</div></div>'">
+      <img src="${m.src}" alt="${m.label}" loading="lazy">
+      <div class="media-label">${m.label}</div>
     </div>
   `).join('');
   const tlItems=d.timeline.map((t,i)=>`
@@ -1353,7 +1270,7 @@ function buildPD(d){
       <div class="wrap">
         <div class="lbl mb16">Client Profile</div>
         <div class="client-profile">
-          ${d.clientPhoto?`<img src="${d.clientPhoto}" alt="Client" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid var(--border);" onerror="this.outerHTML='<div class=\\'client-avatar-placeholder\\'>${d.title.charAt(0)}</div>'">`:`<div class="client-avatar-placeholder">${d.title.charAt(0)}</div>`}
+          <div class="client-avatar-placeholder">${d.title.charAt(0)}</div>
           <div class="client-info"><h3>${d.client.split(',')[0]}</h3><p>${d.clientBio}</p></div>
         </div>
         <div class="lbl mb16">What We Did</div>
@@ -1365,9 +1282,8 @@ function buildPD(d){
 
     <div class="pd-sec" style="background:var(--bg2);">
       <div class="wrap">
-        <div class="lbl mb16">Media &amp; Creatives</div>
+        <div class="lbl mb16">Visuals &amp; Campaign Creatives</div>
         <div class="media-g">${mediaItems}</div>
-        <div class="media-hint">📎 To update these images: right-click your file in Google Drive → Get shareable link → Copy the File ID from the URL → Replace the placeholder IDs in the code</div>
       </div>
     </div>
 
